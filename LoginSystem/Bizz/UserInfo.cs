@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bizz
 {
-    class UserInfo
+    public class UserInfo
     {
         private int id;
         private string name;

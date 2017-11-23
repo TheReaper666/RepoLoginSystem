@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bizz
 {
-    class BizzFunctions
+    public class BizzFunctions
     {
         public ObservableCollection<LoginInfo> CollectionOfLogins = new ObservableCollection<LoginInfo>();
         public ObservableCollection<UserInfo> CollectionOfUsers = new ObservableCollection<UserInfo>();

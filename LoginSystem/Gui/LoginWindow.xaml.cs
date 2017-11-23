@@ -21,9 +21,16 @@ namespace Gui
     /// </summary>
     public partial class MainWindow : Window
     {
+        BizzFunctions UsableBizz;
         public MainWindow()
         {
             InitializeComponent();
+            UsableBizz = new BizzFunctions();
+        }
+
+        private void Login_click(object sender, RoutedEventArgs e)
+        {
+            UsableBizz.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text);
         }
     }
 }
