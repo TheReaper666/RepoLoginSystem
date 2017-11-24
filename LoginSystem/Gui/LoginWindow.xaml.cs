@@ -19,10 +19,10 @@ namespace Gui
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
         BizzFunctions UsableBizz;
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
             UsableBizz = new BizzFunctions();
@@ -30,7 +30,13 @@ namespace Gui
 
         private void Login_click(object sender, RoutedEventArgs e)
         {
-            UsableBizz.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text);
+            
+            if (UsableBizz.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text))
+            {
+                MainWindow MW = new MainWindow();
+                MW.Show();
+                this.Close();
+            }
         }
     }
 }

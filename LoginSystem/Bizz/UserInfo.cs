@@ -69,11 +69,11 @@ namespace Bizz
         {
             get
             {
-                return Phone;
+                return phone;
             }
             set
             {
-                Phone = value;
+                phone = value;
             }
         }
         public Groupflags Groupflag
