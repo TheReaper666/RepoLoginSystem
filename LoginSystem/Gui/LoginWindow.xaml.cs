@@ -27,6 +27,7 @@ namespace Gui
         {
             InitializeComponent();
             BizzF = new BizzFunctions();
+            //UserInfo = new UserInfo();
 
         }
 
