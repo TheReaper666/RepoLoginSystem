@@ -19,9 +19,20 @@ namespace Gui
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Click_Adminitrator(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click_About(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -21,18 +21,21 @@ namespace Gui
     /// </summary>
     public partial class LoginWindow : Window
     {
-        BizzFunctions UsableBizz;
+        UserInfo UserInfo;
+        BizzFunctions BizzF;
         public LoginWindow()
         {
             InitializeComponent();
-            UsableBizz = new BizzFunctions();
+            BizzF = new BizzFunctions();
+
         }
 
         private void Login_click(object sender, RoutedEventArgs e)
         {
             
-            if (UsableBizz.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text))
+            if (BizzF.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text))
             {
+
                 MainWindow MW = new MainWindow();
                 MW.Show();
                 this.Close();
