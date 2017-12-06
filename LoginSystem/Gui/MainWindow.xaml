@@ -10,8 +10,10 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_Option">
-                    <MenuItem Header="About us" Click="Click_About"/>
-                    <MenuItem Header="Administrator" Click="Click_Adminitrator"/>
+                    <MenuItem Header="Administrator Panel" Click="Click_Adminitrator"/>
+                </MenuItem>
+                <MenuItem Header="_Credits">
+                    <MenuItem Header="About Us" Click="Click_About"/>
                 </MenuItem>
             </Menu>
         </DockPanel>

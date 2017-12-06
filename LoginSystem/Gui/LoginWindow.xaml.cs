@@ -21,13 +21,11 @@ namespace Gui
     /// </summary>
     public partial class LoginWindow : Window
     {
-        UserInfo UserInfo;
         BizzFunctions BizzF;
         public LoginWindow()
         {
             InitializeComponent();
             BizzF = new BizzFunctions();
-            //UserInfo = new UserInfo();
 
         }
 
