@@ -29,21 +29,34 @@ namespace Gui
 
         private void Click_Adminitrator(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToString(User.Groupflag) == "Administrator")
+            //Convert.ToString(User.Groupflag) == "Administrator"
+            if (true)
             {
                 AdminitratorPanelWindow APW = new AdminitratorPanelWindow();
                 APW.Show();
                 this.Hide();
             }
             else
-            {
-                MessageBox.Show("NO ACCESS!, Only Adminitrators are allowed in this Panel");
+            { 
+                MessageBox.Show("NO ACCESS!\nOnly Adminitrators are allowed in this Panel");
             }
         }
 
         private void Click_About(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Text - Description"," - About Us");
+            MessageBox.Show("Class:\tAspit-Lab/Software Contruction\nTask:\tLogin System Template\nCreation Date:\t06/12-2017\nProgram Desiger:\tTheReaper666", " - About Us");
+        }
+
+        private void Click_Logout(object sender, RoutedEventArgs e)
+        {
+            LoginWindow LW = new LoginWindow();
+            LW.Show();
+            this.Close();
+        }
+
+        private void Click_Exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

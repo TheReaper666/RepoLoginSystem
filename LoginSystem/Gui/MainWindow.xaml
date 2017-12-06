@@ -9,6 +9,10 @@
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="Log out" Click="Click_Logout"/>
+                    <MenuItem Header="Exit" Click="Click_Exit"/>
+                </MenuItem>
                 <MenuItem Header="_Option">
                     <MenuItem Header="Administrator Panel" Click="Click_Adminitrator"/>
                 </MenuItem>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gui"
         mc:Ignorable="d"
-        Title=" - Login" Height="400" Width="600" ResizeMode="NoResize">
+        Title=" - Login" Height="400" Width="600" ResizeMode="NoResize" Icon="C:\Dev\RepoLoginSystem\LoginSystem\Gui\Images\Lock.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
