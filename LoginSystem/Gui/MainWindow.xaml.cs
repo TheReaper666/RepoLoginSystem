@@ -20,11 +20,9 @@ namespace Gui
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Users User;   
         public MainWindow()
         {
             InitializeComponent();
-            Users User = new Users();
         }
 
         private void Click_Adminitrator(object sender, RoutedEventArgs e)
@@ -34,7 +32,7 @@ namespace Gui
             {
                 AdminitratorPanelWindow APW = new AdminitratorPanelWindow();
                 APW.Show();
-                this.Hide();
+                this.Close();
             }
             else
             { 

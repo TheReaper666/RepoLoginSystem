@@ -9,8 +9,6 @@ namespace Bizz
 {
     public class BizzFunctions
     {
-        public ObservableCollection<LoginInfo> CollectionOfLogins = new ObservableCollection<LoginInfo>();
-        public ObservableCollection<UserInfo> CollectionOfUsers = new ObservableCollection<UserInfo>();
         public BizzFunctions()
         {
 
