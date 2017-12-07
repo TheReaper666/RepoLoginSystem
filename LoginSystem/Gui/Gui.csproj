@@ -54,6 +54,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UCs\UCAddress.xaml.cs">
+      <DependentUpon>UCAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCEmail.xaml.cs">
+      <DependentUpon>UCEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCGroupFlag.xaml.cs">
+      <DependentUpon>UCGroupFlag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCName.xaml.cs">
+      <DependentUpon>UCName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCPasword.xaml.cs">
+      <DependentUpon>UCPasword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCPhone.xaml.cs">
+      <DependentUpon>UCPhone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCUserName.xaml.cs">
+      <DependentUpon>UCUserName.xaml</DependentUpon>
+    </Compile>
     <Page Include="AdminitratorPanelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,6 +95,34 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCGroupFlag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCPasword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCPhone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCUserName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
