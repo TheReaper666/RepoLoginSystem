@@ -16,6 +16,7 @@ namespace IO
         private string _ConnectionString;
         public DBFunctions()
         {
+
         }
 
         /// <summary>

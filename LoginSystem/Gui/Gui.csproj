@@ -161,6 +161,10 @@
       <Project>{aa164eb3-584c-418c-8168-cf87152b1c95}</Project>
       <Name>Bizz</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{2332d34a-d3f3-452b-9efc-a714be9f6b92}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
