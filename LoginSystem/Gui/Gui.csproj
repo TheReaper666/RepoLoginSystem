@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UCs\UCStatus.xaml.cs">
+      <DependentUpon>UCStatus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UCs\UCAddress.xaml.cs">
       <DependentUpon>UCAddress.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\UCStatus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
