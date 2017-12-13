@@ -20,17 +20,18 @@ namespace Gui
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        BizzFunctions BF;
+        public MainWindow(BizzFunctions BizzF)
         {
             InitializeComponent();
+            BF = BizzF;
         }
 
         private void Click_Adminitrator(object sender, RoutedEventArgs e)
         {
-            //Convert.ToString(User.Groupflag) == "Administrator"
-            if (true)
+            if (BF.CheckForAdminitrator())
             {
-                AdminitratorPanelWindow APW = new AdminitratorPanelWindow();
+                AdminitratorPanelWindow APW = new AdminitratorPanelWindow(BF);
                 APW.Show();
                 this.Close();
             }

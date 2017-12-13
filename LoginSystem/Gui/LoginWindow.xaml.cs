@@ -32,12 +32,16 @@ namespace Gui
         private void Login_click(object sender, RoutedEventArgs e)
         {
             
-            if (BizzF.CheckCredentials(textBoxUsername.Text, textBoxPassword.Text))
+            if (BizzF.CheckCredentials(textBoxUsername.Text, textBoxPassword.Password))
             {
 
-                MainWindow MW = new MainWindow();
+                MainWindow MW = new MainWindow(BizzF);
                 MW.Show();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Warning: Username or password incorret!");
             }
         }
     }

@@ -30,7 +30,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="Password:" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
-            <TextBox Grid.Column="1" x:Name="textBoxPassword" Width="150" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" />
+            <PasswordBox Grid.Column="1" x:Name="textBoxPassword" Width="150" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" />
         </Grid>
         <Grid Grid.Row="3">
             <Button Content="Login" Width="100" Height="35" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Click="Login_click" />

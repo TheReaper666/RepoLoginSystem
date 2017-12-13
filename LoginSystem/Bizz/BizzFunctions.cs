@@ -16,6 +16,8 @@ namespace Bizz
         ObservableCollection<Users> OCUsers;
         ObservableCollection<Logins> OCLogins;
         ObservableCollection<UsernamesAndNames> OCNamesAndUsernames;
+        List<string> ListGroups;
+        Logins loggedInUser;
         DBInfo DBinfo;
         public BizzFunctions()
         {
@@ -23,8 +25,31 @@ namespace Bizz
         }
         public bool CheckCredentials(string Username, string Password)
         {
-            return true;
+            GetAllLoginsConverted();
+            foreach (Logins login in OCLogins)
+            {
+                if (login.Username == Username && login.Password == Password && login.Status != false)
+                {
+                    string username = login.Username;
+                    string password = login.Password;
+                    string groupflag = login.stGroupflag;
+                    bool status = login.Status;
+                    int userid = login.UserId;
+                    loggedInUser = new Logins(username, password, status, groupflag, userid);
+                    return true;
+                }
+            }
+            return false;
         }
+        public bool CheckForAdminitrator()
+        {
+            if (loggedInUser.stGroupflag == "Adminitrator")
+            {
+                return true;
+            }
+            return false;
+        }
+
         public ObservableCollection<Users> GetAllUsersConverted()
         {
             DataTable dt = DBinfo.DTGetAllUsersFromDB();
@@ -51,8 +76,9 @@ namespace Bizz
                 string username = reader["Username"].ToString();
                 string password = reader["Password"].ToString();
                 string group = reader["GroupFlag"].ToString();
-                int phone = Convert.ToInt32(reader["Phone"]);
-                Logins login = new Logins(username, password, group);
+                int userid = Convert.ToInt32(reader["userid"]);
+                bool status = Convert.ToBoolean(reader["Status"]);
+                Logins login = new Logins(username, password, status, group, userid);
                 OCLogins.Add(login);
             }
             return OCUsers;
@@ -71,6 +97,18 @@ namespace Bizz
                 OCNamesAndUsernames.Add(Person);
             }
             return OCNamesAndUsernames;
+        }
+        public List<string> GetAllGroupConverted()
+        {
+            DataTable dt = DBinfo.DTGetAllGroupsFromDB();
+            ListGroups = new List<string>();
+            DataTableReader reader = new DataTableReader(dt);
+            while (reader.Read())
+            {
+                string group = reader["GroupFlag"].ToString();
+                ListGroups.Add(group);
+            }
+            return ListGroups;
         }
 
         // SELECT LoginInfo.Username,UserInfo.Name FROM LoginInfo INNER JOIN UserInfo ON LoginInfo.id = UserInfo.id
