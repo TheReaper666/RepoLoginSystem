@@ -78,6 +78,12 @@
     <Compile Include="UCs\UCUserName.xaml.cs">
       <DependentUpon>UCUserName.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCUserCreate.xaml.cs">
+      <DependentUpon>UCUserCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCUserUpdate.xaml.cs">
+      <DependentUpon>UCUserUpdate.xaml</DependentUpon>
+    </Compile>
     <Page Include="AdminitratorPanelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +136,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UCs\UCUserName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCUserCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCUserUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

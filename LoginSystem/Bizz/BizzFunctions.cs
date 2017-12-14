@@ -17,11 +17,14 @@ namespace Bizz
         ObservableCollection<Logins> OCLogins;
         ObservableCollection<UsernamesAndNames> OCNamesAndUsernames;
         List<string> ListGroups;
+        List<bool> ListStatus;
         Logins loggedInUser;
         DBInfo DBinfo;
+        enum statuses { };
         public BizzFunctions()
         {
             DBinfo = new DBInfo();
+            
         }
         public bool CheckCredentials(string Username, string Password)
         {
@@ -110,7 +113,6 @@ namespace Bizz
             }
             return ListGroups;
         }
-
         // SELECT LoginInfo.Username,UserInfo.Name FROM LoginInfo INNER JOIN UserInfo ON LoginInfo.id = UserInfo.id
         // Metoder der kalder andrer metoder i DBInfo
 
