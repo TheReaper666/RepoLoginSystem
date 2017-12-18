@@ -76,10 +76,10 @@ namespace Bizz
             DataTableReader reader = new DataTableReader(dt);
             while (reader.Read())
             {
-                string username = reader["Username"].ToString();
-                string password = reader["Password"].ToString();
                 string group = reader["GroupFlag"].ToString();
                 int userid = Convert.ToInt32(reader["userid"]);
+                string username = reader["Username"].ToString();
+                string password = reader["Password"].ToString();
                 bool status = Convert.ToBoolean(reader["Status"]);
                 Logins login = new Logins(username, password, status, group, userid);
                 OCLogins.Add(login);
