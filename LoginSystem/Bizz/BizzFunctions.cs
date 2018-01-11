@@ -13,6 +13,7 @@ namespace Bizz
 {
     public class BizzFunctions
     {
+        ObservableCollection<UserInformation> OCUserInformation;
         ObservableCollection<Users> OCUsers;
         ObservableCollection<Logins> OCLogins;
         ObservableCollection<UsernamesAndNames> OCNamesAndUsernames;
@@ -52,6 +53,27 @@ namespace Bizz
             }
             return false;
         }
+        public ObservableCollection<UserInformation> GetAllUserInformationsConverted()
+        {
+            DataTable dt = DBinfo.DTGetAllInfo();
+            OCUserInformation = new ObservableCollection<UserInformation>();
+            DataTableReader reader = new DataTableReader(dt);
+            while (reader.Read())
+            {
+                string name = reader["Name"].ToString();
+                string address = reader["Address"].ToString();
+                string email = reader["Email"].ToString();
+                int phone = Convert.ToInt32(reader["Phone"]);
+                string group = reader["GroupFlag"].ToString();
+                int userid = Convert.ToInt32(reader["userid"]);
+                string username = reader["Username"].ToString();
+                string password = reader["Password"].ToString();
+                bool status = Convert.ToBoolean(reader["Status"]);
+                UserInformation user = new UserInformation(username, password, status, group, name, address, email, phone, userid);
+                OCUserInformation.Add(user);
+            }
+            return OCUserInformation;
+        }
 
         public ObservableCollection<Users> GetAllUsersConverted()
         {
@@ -64,7 +86,7 @@ namespace Bizz
                 string address = reader["Address"].ToString();
                 string email = reader["Email"].ToString();
                 int phone = Convert.ToInt32(reader["Phone"]);
-                Users user = new Users(name,address,email,phone);
+                Users user = new Users(name, address, email, phone);
                 OCUsers.Add(user);
             }
             return OCUsers;
@@ -82,6 +104,7 @@ namespace Bizz
                 string password = reader["Password"].ToString();
                 bool status = Convert.ToBoolean(reader["Status"]);
                 Logins login = new Logins(username, password, status, group, userid);
+
                 OCLogins.Add(login);
             }
             return OCUsers;
@@ -95,8 +118,10 @@ namespace Bizz
             {
                 string username = reader["Username"].ToString();
                 string name = reader["Name"].ToString();
+                string group = reader["GroupFlag"].ToString();
                 bool status = Convert.ToBoolean(reader["status"]);
-                UsernamesAndNames Person = new UsernamesAndNames(username, name, status);
+                int userid = Convert.ToInt32(reader["userid"]);
+                UsernamesAndNames Person = new UsernamesAndNames(username, name, group, status, userid);
                 OCNamesAndUsernames.Add(Person);
             }
             return OCNamesAndUsernames;
